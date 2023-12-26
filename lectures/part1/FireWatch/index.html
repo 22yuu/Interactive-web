@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Scrolling</title>
+  </head>
+  <body>
+    <header>
+      <a class="button-in-header">THE MOUNTAIN</a>
+      <div id="right-buttons">
+        <a id="active-menu" class="button-in-header active-menu">MOUNTAIN</a>
+        <a class="button-in-header">AMAZING BLOG</a>
+        <a class="button-in-header">AMAZING NEWS</a>
+      </div>
+    </header>
+    <div id="image-wrapper"></div>
+  </body>
+
+  <script>
+    document
+      .querySelectorAll("#right-buttons .button-in-header")
+      .forEach((element) => {
+        element.addEventListener("click", (event) => {
+          document.getElementById("active-menu").removeAttribute("id");
+
+          element.setAttribute("id", "active-menu");
+        });
+      });
+  </script>
+</html>
