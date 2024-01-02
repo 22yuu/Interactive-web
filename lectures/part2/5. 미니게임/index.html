@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>미니게임</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <img src="./assets/bg1.png" id="bg1-img" class="asset-img" />
     <img src="./assets/bg2.png" id="bg2-img" class="asset-img" />
     <img src="./assets/bg3.png" id="bg3-img" class="asset-img" />
+    <img src="./assets/wall.png" id="wall-img" class="asset-img" />
+    <img src="./assets/bird.png" id="bird-img" class="asset-img" />
+    <img src="./assets/coin.png" id="coin-img" class="asset-img" />
 
-    <canvas></canvas>
+    <main>
+      <section class="ready-screen">
+        <img src="./assets/title.png" class="title-img" />
+        <img src="./assets/play.svg" class="play-img" />
+      </section>
+
+      <section class="finish-screen">
+        <div class="distance">0m</div>
+        <div class="coin">0 coin</div>
+        <img src="./assets/replay.svg" class="replay-img" />
+      </section>
+      <canvas></canvas>
+    </main>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

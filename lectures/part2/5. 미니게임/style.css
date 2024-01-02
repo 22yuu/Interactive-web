@@ -10,10 +10,64 @@ body {
   justify-content: center;
 }
 
-canvas {
-  /* border: 1px solid red; */
-}
-
 .asset-img {
   display: none;
+}
+
+canvas {
+  width: 100vmin;
+  height: 75vmin;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+.ready-screen,
+.finish-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  user-select: none;
+}
+
+.title-img {
+  width: 60vmin;
+  margin-bottom: 15vmin;
+  opacity: 0;
+  transform: scale(2);
+}
+
+.play-img,
+.replay-img {
+  width: 11vmin;
+  cursor: pointer;
+  transform: scale(0);
+}
+
+.finish-screen {
+  color: #fff;
+  font-family: "Roboto";
+  opacity: 0;
+  pointer-events: none;
+}
+
+.finish-screen > .distance {
+  font-size: 15vmin;
+}
+
+.finish-screen > .coin {
+  font-size: 8vmin;
+  margin-bottom: 8vmin;
+  color: gold;
 }
